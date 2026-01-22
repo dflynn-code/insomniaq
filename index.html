@@ -15,8 +15,9 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
+      <!-- LOGO: Erwartet logo.png im Repo-Root (neben index.html) -->
       <a class="brand" href="#top">
-        <img src="assets/img/logo.png" alt="Insomniaq" class="brand-logo" />
+        <img src="logo.png" alt="Insomniaq" class="brand-logo" />
         <span class="brand-name">Insomniaq</span>
       </a>
 
@@ -57,6 +58,7 @@
 
         <div class="card hero-card" aria-label="Promo Video">
           <div class="card-header">
+            <!-- LOGO in der Karte: ebenfalls logo.png im Root -->
             <div class="logo-mark" aria-hidden="true">
               <img src="logo.png" alt="" class="card-logo" />
             </div>
@@ -66,15 +68,15 @@
             </div>
           </div>
 
-          <!-- WICHTIG: promo.mp4 muss im Repo-Root liegen (neben index.html) -->
-          <video class="promo-video" controls playsinline preload="metadata">
-            <source src="promo.mp4" type="video/mp4">
+          <video class="promo-video" controls playsinline muted preload="metadata">
+            <!-- Absolute URL: vermeidet Pfad-/Cache-Probleme -->
+            <source src="https://dflynn-code.github.io/insomniaq/promo.mp4" type="video/mp4">
             Dein Browser unterstützt das Video-Tag nicht.
           </video>
 
           <p class="fineprint">
-            Hinweis: Wenn das Video nicht lädt, teste direkt:
-            https://dflynn-code.github.io/insomniaq/promo.mp4
+            Hinweis: Wenn das Logo nicht lädt, teste direkt:
+            https://dflynn-code.github.io/insomniaq/logo.png
           </p>
         </div>
       </div>
@@ -267,3 +269,4 @@
   </script>
 </body>
 </html>
+
