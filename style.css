@@ -90,7 +90,9 @@ h3{margin: 0 0 10px}
   box-shadow: var(--shadow);
   padding: 18px;
 }
-.hero-card{padding: 18px}
+.hero-card{
+  padding: 14px; /* etwas kompakter für das Video */
+}
 .card-header{display:flex; gap: 12px; align-items:center; margin-bottom: 10px}
 .logo-mark{
   width: 38px; height: 38px; border-radius: 12px;
@@ -178,9 +180,27 @@ input:focus{border-color: rgba(125,211,252,.35)}
 .footer a{color: var(--muted)}
 .footer a:hover{color: var(--text)}
 
+/* VIDEO: kleiner und zentriert im Hero */
+.promo-video{
+  width: 100%;
+  max-width: 420px;     /* <- Video-Fenster kleiner machen */
+  aspect-ratio: 16 / 9; /* falls Hochformat: 9 / 16 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
 @media (max-width: 900px){
   .hero-grid{grid-template-columns: 1fr}
   .grid-3{grid-template-columns: 1fr}
   .grid-2{grid-template-columns: 1fr}
   .nav{display:none}
+
+  /* auf Mobile das Video etwas kleiner halten */
+  .promo-video{max-width: 520px}
 }
+
