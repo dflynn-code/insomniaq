@@ -9,16 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-<a class="brand" href="#top">
-  <img src="logo.png" alt="Insomniaq Logo" class="brand-logo">
-</a>
-
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="Insomniaq" class="brand-logo" />
+        <span class="brand-name">Insomniaq</span>
+      </a>
 
       <nav class="nav">
         <a href="#produkt">Produkt</a>
@@ -26,6 +26,7 @@
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
       </nav>
+
       <a class="btn btn-primary" href="#waitlist">Waitlist</a>
     </div>
   </header>
@@ -40,6 +41,7 @@
             Insomniaq ist eine Blackout-Maske mit integriertem Licht-Weck-Programm und App-Routinen.
             Optional: ein experimentelles Dream-Lab mit Licht-Cues für Interessierte.
           </p>
+
           <div class="cta-row">
             <a class="btn btn-primary" href="#waitlist">Zur Waitlist</a>
             <a class="btn btn-ghost" href="#produkt">So funktioniert’s</a>
@@ -53,24 +55,26 @@
           </div>
         </div>
 
-        <!-- VIDEO (rechts im Hero) -->
         <div class="card hero-card" aria-label="Promo Video">
           <div class="card-header">
-            <div class="logo-mark" aria-hidden="true"></div>
+            <div class="logo-mark" aria-hidden="true">
+              <img src="logo.png" alt="" class="card-logo" />
+            </div>
             <div>
               <div class="card-title">Insomniaq – Promo</div>
               <div class="card-subtitle">Clip auf der Produktseite</div>
             </div>
           </div>
 
+          <!-- WICHTIG: promo.mp4 muss im Repo-Root liegen (neben index.html) -->
           <video class="promo-video" controls playsinline preload="metadata">
-            <!-- Wenn die Datei in /assets liegt und NICHT umbenannt wurde -->
             <source src="promo.mp4" type="video/mp4">
             Dein Browser unterstützt das Video-Tag nicht.
           </video>
 
           <p class="fineprint">
-            Hinweis: Wenn das Video nicht lädt, prüfe den Pfad/Dateinamen (Groß-/Kleinschreibung, Ordner).
+            Hinweis: Wenn das Video nicht lädt, teste direkt:
+            https://dflynn-code.github.io/insomniaq/promo.mp4
           </p>
         </div>
       </div>
@@ -79,6 +83,7 @@
     <section class="section" id="produkt">
       <div class="container">
         <h2>Produkt: was heute zuverlässig geht</h2>
+
         <div class="grid-3">
           <div class="card">
             <h3>1) Wake-Mask (Kernprodukt)</h3>
@@ -92,6 +97,7 @@
               <li>Offline-Fallback (ohne App nutzbar)</li>
             </ul>
           </div>
+
           <div class="card">
             <h3>2) App als Habit-Stack</h3>
             <p>
@@ -104,6 +110,7 @@
               <li>Coaching-Flows statt „Hardware-Magie“</li>
             </ul>
           </div>
+
           <div class="card">
             <h3>3) Dream-Lab (optional)</h3>
             <p>
@@ -127,6 +134,7 @@
     <section class="section alt" id="zielgruppe">
       <div class="container">
         <h2>Zielgruppen, die wirklich tragen</h2>
+
         <div class="grid-2">
           <div class="card">
             <h3>Primär: sanfter Start in den Tag</h3>
@@ -137,6 +145,7 @@
               <li>Schichtarbeit (Weckfenster, Struktur)</li>
             </ul>
           </div>
+
           <div class="card">
             <h3>Sekundär: Dream-Community (Nische)</h3>
             <p>
@@ -156,6 +165,7 @@
     <section class="section" id="roadmap">
       <div class="container">
         <h2>Roadmap: realistisch skalieren</h2>
+
         <div class="timeline">
           <div class="step">
             <div class="step-num">Phase 1</div>
@@ -164,6 +174,7 @@
               <p>Komfort, Lichtkurven, Weckfenster, Journal, Routinen. Fokus auf Fertigung & Zuverlässigkeit.</p>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">Phase 2</div>
             <div class="step-body">
@@ -171,6 +182,7 @@
               <p>Timer-Cues, Trainingsprogramme, Beta-Tests, konservatives Wording. Keine „REM-Garantie“.</p>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">Phase 3</div>
             <div class="step-body">
@@ -185,10 +197,12 @@
     <section class="section alt" id="faq">
       <div class="container">
         <h2>FAQ (prüfungs- und markttauglich)</h2>
+
         <details class="faq">
           <summary>Ist das ein medizinisches Gerät?</summary>
           <p>Nein. Insomniaq ist ein Lifestyle-/Wellbeing-Produkt und ersetzt keine Diagnostik oder Behandlung.</p>
         </details>
+
         <details class="faq">
           <summary>Funktioniert der Lucid-Mode garantiert?</summary>
           <p>
@@ -196,6 +210,7 @@
             Deshalb ist es als optionales „Dream-Lab“ konzipiert.
           </p>
         </details>
+
         <details class="faq">
           <summary>Kann mich das Licht aufwecken?</summary>
           <p>
@@ -203,6 +218,7 @@
             Nutzer können Cues reduzieren oder deaktivieren.
           </p>
         </details>
+
         <details class="faq">
           <summary>Was ist der Kernnutzen?</summary>
           <p>Sanftes Aufwachen durch Dawn-Simulation in einer bequemen Blackout-Maske – plus App-Routinen.</p>
@@ -251,4 +267,3 @@
   </script>
 </body>
 </html>
-
