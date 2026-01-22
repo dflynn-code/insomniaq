@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="de">
 <head>
@@ -50,22 +49,24 @@
           </div>
         </div>
 
-        <div class="card hero-card" aria-label="Produktkarte">
+        <!-- VIDEO (rechts im Hero) -->
+        <div class="card hero-card" aria-label="Promo Video">
           <div class="card-header">
             <div class="logo-mark" aria-hidden="true"></div>
             <div>
-              <div class="card-title">Insomniaq Wake-Mask</div>
-              <div class="card-subtitle">Dawn-Wake als Kernnutzen</div>
+              <div class="card-title">Insomniaq – Promo</div>
+              <div class="card-subtitle">Clip auf der Produktseite</div>
             </div>
           </div>
-          <ul class="feature-list">
-            <li><strong>Dawn-Programm</strong> mit weichen Lichtkurven</li>
-            <li><strong>Blackout-Design</strong> für dunkle Schlafumgebung</li>
-            <li><strong>App-Routinen</strong> (Weckfenster, Schlafhygiene, Journal)</li>
-            <li><strong>Optional</strong>: Dream-Lab (Licht-Cues, Training, Reality Checks)</li>
-          </ul>
+
+          <video class="promo-video" controls playsinline preload="metadata">
+            <!-- Wenn die Datei in /assets liegt und NICHT umbenannt wurde -->
+            <source src="Assets/promo.mp4" type="video/mp4">
+            Dein Browser unterstützt das Video-Tag nicht.
+          </video>
+
           <p class="fineprint">
-            Hinweis: Das Dream-Lab ist experimentell und ersetzt keine Schlafdiagnostik.
+            Hinweis: Wenn das Video nicht lädt, prüfe den Pfad/Dateinamen (Groß-/Kleinschreibung, Ordner).
           </p>
         </div>
       </div>
@@ -215,7 +216,6 @@
           <h2>Waitlist</h2>
           <p>Trag dich ein, wenn du Updates zu Prototyp, Beta-Tests oder Launch erhalten willst.</p>
 
-          <!-- Für eine echte Eintragung: Formspree / Google Forms / Mailchimp einbinden -->
           <form class="form" onsubmit="event.preventDefault(); alert('Demo: Formular noch nicht verbunden.');">
             <label>
               E-Mail
@@ -247,5 +247,4 @@
   </script>
 </body>
 </html>
-```
 
