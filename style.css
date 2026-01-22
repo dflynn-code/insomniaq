@@ -1,11 +1,9 @@
 :root{
   --bg:#0b0c10;
   --panel:#12141b;
-  --panel2:#0f1117;
   --text:#e9ecf1;
   --muted:#b5bdc9;
   --line:#232736;
-  --accent:#7dd3fc;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
@@ -25,18 +23,15 @@ body{
 a{color:inherit;text-decoration:none}
 .container{width:min(1100px, 92%);margin:0 auto}
 
+/* Header */
 .topbar{
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  position: sticky; top: 0; z-index: 20;
   backdrop-filter: blur(10px);
   background: rgba(11,12,16,.65);
   border-bottom: 1px solid var(--line);
 }
 .topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display:flex; align-items:center; justify-content:space-between;
   padding: 14px 0;
   gap: 14px;
 }
@@ -44,20 +39,25 @@ a{color:inherit;text-decoration:none}
   display:flex;
   align-items:center;
   gap:10px;
+  font-weight:800;
+  letter-spacing:.2px;
 }
-
 .brand-logo{
-  height: 38px;     /* <- größer machen, z.B. 44px */
+  height: 44px;     /* LOGO GRÖSSE: 44px -> 52px wenn du es größer willst */
   width: auto;
   display:block;
 }
+.brand-name{
+  font-weight:800;
+}
 
+.nav{display:flex; gap: 14px; flex-wrap:wrap}
+.nav a{color: var(--muted)}
+.nav a:hover{color: var(--text)}
 
-
+/* Buttons */
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display:inline-flex; align-items:center; justify-content:center;
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid var(--line);
@@ -73,16 +73,13 @@ a{color:inherit;text-decoration:none}
 .btn-ghost{color: var(--muted)}
 .btn-ghost:hover{color: var(--text)}
 
+/* Hero */
 .hero{padding: 54px 0 22px}
-
-/* HERO: rechte Spalte kleiner machen */
 .hero-grid{
   display:grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.2fr .8fr;
   gap: 24px;
-  align-items: start;
 }
-
 .kicker{color: var(--muted); margin: 0 0 10px}
 h1{font-size: clamp(30px, 4vw, 48px); line-height: 1.12; margin: 0 0 12px}
 .lead{color: var(--muted); font-size: 1.05rem; margin: 0 0 18px}
@@ -98,12 +95,9 @@ h1{font-size: clamp(30px, 4vw, 48px); line-height: 1.12; margin: 0 0 12px}
   border-radius: 999px;
 }
 
+/* Sections & Cards */
 .section{padding: 44px 0}
-.section.alt{
-  background: rgba(18,20,27,.35);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
+.section.alt{background: rgba(18,20,27,.35); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)}
 h2{font-size: clamp(22px, 2.5vw, 30px); margin: 0 0 18px}
 h3{margin: 0 0 10px}
 
@@ -114,26 +108,30 @@ h3{margin: 0 0 10px}
   box-shadow: var(--shadow);
   padding: 18px;
 }
-
-/* HERO-Card: schmal begrenzen, damit Video nicht riesig wirkt */
-.hero-card{
-  max-width: 480px;
-  justify-self: end;
-  padding: 14px;
-}
+.hero-card{padding: 18px}
 
 .card-header{display:flex; gap: 12px; align-items:center; margin-bottom: 10px}
 .logo-mark{
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, rgba(125,211,252,.9), rgba(167,139,250,.55));
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  overflow:hidden;
 }
+.card-logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display:block;
+}
+
 .card-title{font-weight:800}
 .card-subtitle{color: var(--muted); font-size: .92rem}
 
-.feature-list{margin: 12px 0 6px; padding-left: 18px; color: var(--muted)}
-.feature-list li{margin: 6px 0}
 .bullets{margin: 10px 0 0; padding-left: 18px; color: var(--muted)}
 .bullets li{margin: 6px 0}
 
@@ -157,6 +155,18 @@ h3{margin: 0 0 10px}
   color: var(--muted);
 }
 
+/* Video */
+.promo-video{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
+/* Timeline */
 .timeline{display:grid; gap: 12px}
 .step{
   display:grid;
@@ -171,6 +181,7 @@ h3{margin: 0 0 10px}
 .step-num{font-weight:800; color: rgba(125,211,252,.9)}
 .step-body p{margin: 6px 0 0; color: var(--muted)}
 
+/* FAQ */
 .faq{
   border: 1px solid var(--line);
   background: rgba(18,20,27,.55);
@@ -180,7 +191,9 @@ h3{margin: 0 0 10px}
 }
 .faq summary{cursor:pointer; font-weight:700}
 .faq p{margin: 10px 0 0; color: var(--muted)}
+.legal{margin-top: 14px; color: var(--muted)}
 
+/* Waitlist */
 .waitlist{padding: 22px}
 .form{display:flex; gap: 10px; flex-wrap:wrap; margin-top: 12px}
 label{display:grid; gap: 6px; color: var(--muted)}
@@ -194,10 +207,9 @@ input{
   outline: none;
 }
 input:focus{border-color: rgba(125,211,252,.35)}
-
 .fineprint{color: var(--muted); font-size: .9rem; margin-top: 10px}
-.legal{margin-top: 14px; color: var(--muted)}
 
+/* Footer */
 .footer{
   border-top: 1px solid var(--line);
   padding: 18px 0;
@@ -208,26 +220,11 @@ input:focus{border-color: rgba(125,211,252,.35)}
 .footer a{color: var(--muted)}
 .footer a:hover{color: var(--text)}
 
-/* VIDEO: kleiner und zentriert */
-.promo-video{
-  width: 100%;
-  max-width: 420px; /* kleiner machen: 360px */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  background: #000;
-}
-
+/* Responsive */
 @media (max-width: 900px){
   .hero-grid{grid-template-columns: 1fr}
   .grid-3{grid-template-columns: 1fr}
   .grid-2{grid-template-columns: 1fr}
   .nav{display:none}
-
-  .hero-card{max-width: 100%; justify-self: stretch;}
-  .promo-video{max-width: 100%;}
 }
 
