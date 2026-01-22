@@ -11,11 +11,13 @@
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+
 body{
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 500px at 20% 0%, rgba(125,211,252,.12), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(167,139,250,.10), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 500px at 20% 0%, rgba(125,211,252,.12), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(167,139,250,.10), transparent 60%),
+    var(--bg);
   color: var(--text);
   line-height: 1.55;
 }
@@ -24,13 +26,17 @@ a{color:inherit;text-decoration:none}
 .container{width:min(1100px, 92%);margin:0 auto}
 
 .topbar{
-  position: sticky; top: 0; z-index: 20;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   backdrop-filter: blur(10px);
   background: rgba(11,12,16,.65);
   border-bottom: 1px solid var(--line);
 }
 .topbar-inner{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding: 14px 0;
   gap: 14px;
 }
@@ -40,14 +46,15 @@ a{color:inherit;text-decoration:none}
 .nav a:hover{color: var(--text)}
 
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid var(--line);
   background: transparent;
   color: var(--text);
   font-weight: 600;
-  box-shadow: none;
 }
 .btn:hover{border-color:#2f3550}
 .btn-primary{
@@ -58,11 +65,15 @@ a{color:inherit;text-decoration:none}
 .btn-ghost:hover{color: var(--text)}
 
 .hero{padding: 54px 0 22px}
+
+/* HERO: rechte Spalte kleiner machen */
 .hero-grid{
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 24px;
+  align-items: start;
 }
+
 .kicker{color: var(--muted); margin: 0 0 10px}
 h1{font-size: clamp(30px, 4vw, 48px); line-height: 1.12; margin: 0 0 12px}
 .lead{color: var(--muted); font-size: 1.05rem; margin: 0 0 18px}
@@ -79,7 +90,11 @@ h1{font-size: clamp(30px, 4vw, 48px); line-height: 1.12; margin: 0 0 12px}
 }
 
 .section{padding: 44px 0}
-.section.alt{background: rgba(18,20,27,.35); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line)}
+.section.alt{
+  background: rgba(18,20,27,.35);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 h2{font-size: clamp(22px, 2.5vw, 30px); margin: 0 0 18px}
 h3{margin: 0 0 10px}
 
@@ -90,12 +105,19 @@ h3{margin: 0 0 10px}
   box-shadow: var(--shadow);
   padding: 18px;
 }
+
+/* HERO-Card: schmal begrenzen, damit Video nicht riesig wirkt */
 .hero-card{
-  padding: 14px; /* etwas kompakter für das Video */
+  max-width: 480px;
+  justify-self: end;
+  padding: 14px;
 }
+
 .card-header{display:flex; gap: 12px; align-items:center; margin-bottom: 10px}
 .logo-mark{
-  width: 38px; height: 38px; border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
   background: radial-gradient(circle at 30% 30%, rgba(125,211,252,.9), rgba(167,139,250,.55));
 }
 .card-title{font-weight:800}
@@ -137,10 +159,7 @@ h3{margin: 0 0 10px}
   border: 1px solid var(--line);
   background: rgba(18,20,27,.55);
 }
-.step-num{
-  font-weight:800;
-  color: rgba(125,211,252,.9);
-}
+.step-num{font-weight:800; color: rgba(125,211,252,.9)}
 .step-body p{margin: 6px 0 0; color: var(--muted)}
 
 .faq{
@@ -180,11 +199,10 @@ input:focus{border-color: rgba(125,211,252,.35)}
 .footer a{color: var(--muted)}
 .footer a:hover{color: var(--text)}
 
-/* VIDEO: kleiner und zentriert im Hero */
+/* VIDEO: kleiner und zentriert */
 .promo-video{
   width: 100%;
-  max-width: 420px;     /* <- Video-Fenster kleiner machen */
-  aspect-ratio: 16 / 9; /* falls Hochformat: 9 / 16 */
+  max-width: 420px; /* kleiner machen: 360px */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -200,7 +218,7 @@ input:focus{border-color: rgba(125,211,252,.35)}
   .grid-2{grid-template-columns: 1fr}
   .nav{display:none}
 
-  /* auf Mobile das Video etwas kleiner halten */
-  .promo-video{max-width: 520px}
+  .hero-card{max-width: 100%; justify-self: stretch;}
+  .promo-video{max-width: 100%;}
 }
 
