@@ -44,16 +44,14 @@ a{color:inherit;text-decoration:none}
   display:flex;
   align-items:center;
   gap:10px;
-  font-weight:800;
-  letter-spacing:.2px;
 }
 
 .brand-logo{
-  height:28px;
-  width:auto;
+  height: 38px;     /* <- größer machen, z.B. 44px */
+  width: auto;
   display:block;
-  border-radius:8px;
 }
+
 
 
 .btn{
